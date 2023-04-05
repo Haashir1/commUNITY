@@ -7590,8 +7590,8 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  background-color: rgb(0, 255, 204); /* change this to the color you want */
-  border-color: rgb(0, 255, 204); /* change this to the same color as the background */
+  background-color: rgb(46, 183, 155); /* change this to the color you want */
+  border-color: rgb(46, 183, 155); /* change this to the same color as the background */
 }
 
 .justify-content-start {
@@ -8458,9 +8458,10 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
+  --bs-primary-rgb: 84, 199, 99; /* Blue color code */
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
-}
+  }
 
 .bg-secondary {
   --bs-bg-opacity: 1;
