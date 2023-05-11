@@ -6,7 +6,7 @@
     <title>commUNITY - Home</title>
     <link rel="stylesheet" href="./resources/styles/style.css">
     <script src="./resources/scripts/colorModes.js"></script>
-    <script src=“formsubmission.js” defer></script>
+    <script src="formsubmission.js"></script>
 </head>
 
 <body>
@@ -83,7 +83,7 @@
     </div>
 </div>
 <h1>Form Submission</h1>
-<form method="POST" action="http://192.168.0.214:9999/save-form-data">
+<form id="form" method="POST" action="http://10.69.158.186:9999/save-form-data">
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" required><br><br>
 
@@ -95,6 +95,7 @@
 
   <input type="submit" value="Submit">
 </form>
+
 
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
