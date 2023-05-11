@@ -81,7 +81,20 @@
         <a class="btn btn-primary btn-lg mx-auto text-center" href="./pages/about/team.html" role="button">HELP US</a>
     </div>
 </div>
+<h1>Form Submission</h1>
+<form method="POST" action="http://192.168.0.214:9999/save-form-data">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
 
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+<script src="path/to/your/javascript/file.js"></script>
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-muted">© 2023 commUNITY</p>
