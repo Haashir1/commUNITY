@@ -1,20 +1,35 @@
-document.getElementById('form').addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent the default form submission behavior
+const express = require('express');
+const app = express();
+const fs = require('fs');
+const path = require('path');
 
-  const form = event.target;
-  const formData = new FormData(form);
+app.use(express.urlencoded({ extended: true }));
 
-  fetch('http://10.69.158.186:9999/save-form-data', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.text())
-  .then(data => {
-    console.log(data); // You can customize this based on your requirements
-    // Add any additional actions you want to perform after the form submission
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    // Handle any errors that occur during the form submission
+// Define a route to handle the form submission
+app.post('/save-form-data', (req, res) => {
+  // Extract the form data from the request body
+  const { name, email, message } = req.body;
+
+  // Create a new file path to save the form data
+  const filePath = path.join(__dirname, 'data.txt');
+
+  // Format the form data as a string
+  const formDataString = `Name: ${name}\nEmail: ${email}\nMessage: ${message}\n`;
+
+  // Save the form data to the file
+  fs.writeFile(filePath, formDataString, (err) => {
+    if (err) {
+      console.error('Error:', err);
+      res.status(500).send('Failed to save form data.');
+    } else {
+      console.log('Form data saved successfully.');
+      res.send('Form data saved successfully.');
+    }
   });
 });
+
+// Start the server
+app.listen(9029, () => {
+  console.log('Server running on http://localhost:9029');
+});
+
