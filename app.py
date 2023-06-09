@@ -1,13 +1,11 @@
+
+# A very simple Flask Hello World app for you to get started with...
+
 from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def hello_world():
-    return "<p>Hello, World!</p>"
-
-@app.route("/test")
-def test():
-    return "<p>Testing new route endpoint!</p>"
-
+    return 'Hello from Flask!'
 
