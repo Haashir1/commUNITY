@@ -1,87 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>commUNITY - Home</title>
     <link rel="stylesheet" href="./resources/styles/style.css">
+    <script src="formsubmission.js"></script>
     <script src="./resources/scripts/colorModes.js"></script>
-    <script src="./resources/scripts/formsubmission.js"></script>
+<script src="./resources/scripts/formsubmission.js"></script>
+<script src="./resources/scripts/navShrink.js"></script>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg px-5 py-3 fixed-top shadow bg-primary text-white" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a href="./index.html" class="navbar-brand">
-                <img id="logo" src="./resources/images/muslim 4 better.png" alt="Logo" width="75" class="d-inline-block align-text-md">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 25px; padding: 1px;">
-                    <path fill="#bbb"
-                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-                </svg>
-            </button>
-            <div class="offcanvas offcanvas-end fs-5 text" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">commUNITY</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link shrinks active" aria-current="page">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link shrinks dropdown-toggle" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Learn More
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./pages/about/team.html" class="dropdown-item">Donate</a></li>
-                                <li><a href="./pages/about/robot.html" class="dropdown-item">Sign up for Donations</a></li>
-                                <li><a href="./pages/about/mission.html" class="dropdown-item">Our Mission</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./pages/contact.html" class="nav-link shrinks">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./pages/signup.html" class="nav-link shrinks">Sign Up</a>
-                        </li>
-                    </ul>
-                </div>
+<nav class="navbar navbar-expand-lg px-5 py-3 fixed-top shadow bg-primary text-white" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a href="./index.html" class="navbar-brand">
+            <img id="logo" src="resources/images/muslim 4 better.png" alt="Logo" width="75" class="d-inline-block align-text-md">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 25px; padding: 1px;">
+                <path fill="#bbb"
+                      d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                />
+            </svg>
+        </button>
+        <div class="offcanvas offcanvas-end fs-5 text" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">commUNITY</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link shrinks active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link shrinks dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Learn More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./pages/about/team.html" class="dropdown-item">Donate</a></li>
+                            <li><a href="./pages/about/robot.html" class="dropdown-item">Sign up for Donations</a></li>
+                            <li><a href="./pages/about/values.html" class="dropdown-item">Help Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link shrinks dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./pages/About Us/Who We Are.html" class="dropdown-item">Who We Are</a></li>
+                            <li><a href="pages/About Us/Contact Us.html" class="dropdown-item">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <header class="container-fluid px-5 py-5 bg-light text-center">
-        <h1 class="display-4">commUNITY</h1>
-        <p class="lead">A place to connect and support each other</p>
-        <form id="signupForm">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Email" id="emailInput">
-                        <button class="btn btn-primary" type="submit">Sign Up</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </header>
+<div class="jumbotron bg-body-tertiary border rounded mx-auto my-5 p-4" style="width: 80vw;">
+    <div class="container-sm">
+        <h1 class="display-4 bt-primary	btn-lg	mx-auto	text-center">Welcome to commUNITY</h1>
+        <p class="lead" style="text-indent: 1em;">Refugees face numerous hardships when they arrive in a new country, and the situation is no different for those
+            who come to the United States. They often have to navigate complex legal systems, learn a new language, and adapt to a different culture while dealing 
+            with the trauma of leaving their homes behind. In Michigan, many refugees also struggle to find affordable housing, healthcare, and edu N cation.</p>
+        <p class="lead" style="text-indent: 1em;">Despite these challenges, refugees are often some of the most resilient and resourceful members of our communities.
+            By providing them with the support and resources they need to succeed, we can help them to rebuild their lives and contribute to the greater good.</p>
+        <p class="lead" style="text-indent: 1em;">At commUNITY, we are deeply committed to helping refugees in need. Our organization is based in Ann Arbor, Michigan 
+            and operates out of the MCA masjid. We take a unique approach to refugee aid by collecting real-world data to determine the most pressing needs of refugees
+            in our community. This allows us to better pair available supplies with those who need them the most.</p>   
+        <p class="lead" style="text-indent: 1em;">If you are interested in joining us in our mission to support refugees, we encourage you to visit our HELP US page to 
+            learn more about how you can get involved.</p>  
+        <p class="lead" style="text-indent: 1em;">As Muslims, we are called upon to be charitable and to help those in need. This is reflected in numerous hadiths, or 
+            sayings of the Prophet Muhammad (peace be upon him), that emphasize the importance of giving to others.</p> 
+        <p class="lead" style="text-indent: 1em;">One such hadith states: “Protect yourself from hell-fire even by giving a piece of date as charity.” (Al-Bukhari 
+            and Muslim) This hadith reminds us that even the smallest acts of charity can have a significant impact and help us to earn Allah's reward and protection.</p>
+        <p class="lead" style="text-indent: 1em;">Another hadith tells us that: “The believer’s shade on the Day of Resurrection will be his charity.” (Al-Tirmidhi) 
+            This beautiful hadith emphasizes the importance of giving generously to others, as it will be a source of comfort and shade for us on the Day of Judgment.</p>
+        <p class="lead" style="text-indent: 1em;">As Muslims, it is our duty to care for those in need and to give generously to charity. We hope that you will join 
+            us in our efforts to support refugees and make a positive difference in the lives of those who are struggling.</p>
+        <a class="btn btn-primary btn-lg mx-auto text-center" href="./pages/about/team.html" role="button">HELP US</a>
+    </div>
+</div>
+<h1>Form Submission</h1>
+<form id="form" method="POST" action="http://192.168.0.214:9029/save-form-data">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2023 commUNITY. All rights reserved.</p>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">© 2023 commUNITY</p>
+
+        <a href="./index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="resources/images/muslim 4 better.png" alt="commUNITY Logo" height="40px">
+        </a>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item" style="padding-right: 1rem;"><a href="./pages/about/team.html" class="dropdown-item">Donate</a></li>
+            <li class="nav-item" style="padding-right: 1rem;"><a href="./pages/about/robot.html" class="dropdown-item">Sign up for Donations</a></li>
+            <li class="nav-item" style="padding-right: 1rem;"><a href="./pages/about/values.html" class="dropdown-item">Help Us</a></li>
+            <li class="nav-item" style="padding-right: 1rem;"><a href="./pages/About Us/Contact Us.html" class="dropdown-item">Contact Us</a></li>
+        </ul>
+        
+        
     </footer>
-
-    <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-..." crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"
-        integrity="sha384-..." crossorigin="anonymous"></script>
-    <script src="./resources/scripts/navShrink.js"></script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="resources/scripts/navShrink.js"></script>
 </body>
-
 </html>
