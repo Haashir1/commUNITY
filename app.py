@@ -1,14 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
-
-
+app.debug = True
 @app.route('/')
-def hello_world():
-    return "<p>Hello, World!</p>"
-
-@app.route("/test")
-def test():
-    return "<p>Testing new route endpoint!</p>"
-
+def index():
+    return render_template('index.html')
 
