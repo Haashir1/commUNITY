@@ -33,5 +33,10 @@ def save_form_data():
 
     return "Form submitted successfully!"
 
+# Route for serving static files
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return app.send_static_file(filename)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9029)

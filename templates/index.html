@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>commUNITY - Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/colorModes.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/formsubmission.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='css/style.css') }}">
+    <script src="{{ url_for('serve_static', filename='js/colorModes.js') }}"></script>
+    <script src="{{ url_for('serve_static', filename='js/formsubmission.js') }}"></script>
 </head>
 
 <body>
 <nav class="navbar navbar-expand-lg px-5 py-3 fixed-top shadow bg-primary text-white" data-bs-theme="dark">
     <div class="container-fluid">
         <a href="{{ url_for('index') }}" class="navbar-brand">
-            <img id="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" width="75" class="d-inline-block align-text-md">
+            <img id="logo" src="{{ url_for('serve_static', filename='images/logo.png') }}" alt="Logo" width="75" class="d-inline-block align-text-md">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 25px; padding: 1px;">
@@ -38,18 +38,12 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ url_for('donate') }}" class="dropdown-item">Donate</a></li>
-                            <li><a href="{{ url_for('signup') }}" class="dropdown-item">Sign up for Donations</a></li>
+                            <li><a href="{{ url_for('signup') }}" class="dropdown-item">Sign Up for Donations</a></li>
                             <li><a href="{{ url_for('help') }}" class="dropdown-item">Help Us</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link shrinks dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About Us
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('who') }}" class="dropdown-item">Who We Are</a></li>
-                            <li><a href="{{ url_for('contact') }}" class="dropdown-item">Contact Us</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href="{{ url_for('contact') }}" class="nav-link shrinks">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -59,10 +53,10 @@
 
 <div class="jumbotron bg-body-tertiary border rounded mx-auto my-5 p-4" style="width: 80vw;">
     <div class="container-sm">
-        <h1 class="display-4 bt-primary	btn-lg	mx-auto	text-center">Welcome to commUNITY</h1>
+        <h1 class="display-4 bt-primary btn-lg mx-auto text-center">Welcome to commUNITY</h1>
         <p class="lead" style="text-indent: 1em;">Refugees face numerous hardships when they arrive in a new country, and the situation is no different for those
             who come to the United States. They often have to navigate complex legal systems, learn a new language, and adapt to a different culture while dealing 
-            with the trauma of leaving their homes behind. In Michigan, many refugees also struggle to find affordable housing, healthcare, and edu N cation.</p>
+            with the trauma of leaving their homes behind. In Michigan, many refugees also struggle to find affordable housing, healthcare, and education.</p>
         <p class="lead" style="text-indent: 1em;">Despite these challenges, refugees are often some of the most resilient and resourceful members of our communities.
             By providing them with the support and resources they need to succeed, we can help them to rebuild their lives and contribute to the greater good.</p>
         <p class="lead" style="text-indent: 1em;">At commUNITY, we are deeply committed to helping refugees in need. Our organization is based in Ann Arbor, Michigan 
@@ -101,7 +95,7 @@
         <p class="col-md-4 mb-0 text-muted">© 2023 commUNITY</p>
 
         <a href="{{ url_for('index') }}" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <img src="{{ url_for('static', filename='images/logo.html') }}" alt="commUNITY Logo" height="40px">
+            <img src="{{ url_for('serve_static', filename='images/logo.png') }}" alt="commUNITY Logo" height="40px">
         </a>
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('donate') }}" class="dropdown-item">Donate</a></li>
@@ -113,6 +107,8 @@
         
     </footer>
 </div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-..." crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='scripts/navShrink.js') }}"></script>
 </body>
