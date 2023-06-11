@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>commUNITY - Home</title>
-    <link rel="stylesheet" href="./resources/styles/style.css">
-    <script src="./resources/scripts/colorModes.js"></script>
-    <script src="./resources/scripts/formsubmission.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/colorModes.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/formsubmission.js') }}"></script>
 </head>
 
 <body>
 <nav class="navbar navbar-expand-lg px-5 py-3 fixed-top shadow bg-primary text-white" data-bs-theme="dark">
     <div class="container-fluid">
-        <a href="./index.html" class="navbar-brand">
-            <img id="logo" src="resources/images/muslim 4 better.png" alt="Logo" width="75" class="d-inline-block align-text-md">
+        <a href="{{ url_for('index') }}" class="navbar-brand">
+            <img id="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" width="75" class="d-inline-block align-text-md">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 25px; padding: 1px;">
@@ -31,16 +30,16 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link shrinks active" aria-current="page">Home</a>
+                        <a href="{{ url_for('index') }}" class="nav-link shrinks active" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link shrinks dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Learn More
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="./my_flask_app/templates/Donate.html" class="dropdown-item">Donate</a></li>
-                            <li><a href="./my_flask_app/templates/Sign Up for Donations.html" class="dropdown-item">Sign up for Donations</a></li>
-                            <li><a href="./my_flask_app/templates/Help Us.html" class="dropdown-item">Help Us</a></li>
+                            <li><a href="{{ url_for('donate') }}" class="dropdown-item">Donate</a></li>
+                            <li><a href="{{ url_for('signup') }}" class="dropdown-item">Sign up for Donations</a></li>
+                            <li><a href="{{ url_for('help') }}" class="dropdown-item">Help Us</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -48,11 +47,10 @@
                             About Us
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="./pages/templates/Who We Are.html" class="dropdown-item">Who We Are</a></li>
-                            <li><a href="pages/templates/Contact Us.html" class="dropdown-item">Contact Us</a></li>
+                            <li><a href="{{ url_for('who') }}" class="dropdown-item">Who We Are</a></li>
+                            <li><a href="{{ url_for('contact') }}" class="dropdown-item">Contact Us</a></li>
                         </ul>
                     </li>
-                    
                 </ul>
             </div>
         </div>
@@ -80,7 +78,7 @@
             This beautiful hadith emphasizes the importance of giving generously to others, as it will be a source of comfort and shade for us on the Day of Judgment.</p>
         <p class="lead" style="text-indent: 1em;">As Muslims, it is our duty to care for those in need and to give generously to charity. We hope that you will join 
             us in our efforts to support refugees and make a positive difference in the lives of those who are struggling.</p>
-        <a class="btn btn-primary btn-lg mx-auto text-center" href="./my_flask_app/templates/Help Us.html" role="button">HELP US</a>
+        <a class="btn btn-primary btn-lg mx-auto text-center" href="{{ url_for('help') }}" role="button">HELP US</a>
     </div>
 </div>
 <h1>Form Submission</h1>
@@ -102,20 +100,20 @@
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-muted">© 2023 commUNITY</p>
 
-        <a href="./index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <img src="./my_flask_app/static/images/logo.html" alt="commUNITY Logo" height="40px">
+        <a href="{{ url_for('index') }}" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="{{ url_for('static', filename='images/logo.html') }}" alt="commUNITY Logo" height="40px">
         </a>
         <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item" style="padding-right: 1rem;"><a href="./my_flask_app/templates/Donate.html" class="dropdown-item">Donate</a></li>
-            <li class="nav-item" style="padding-right: 1rem;"><a href="./my_flask_app/templates/Sign Up for Donations.html" class="dropdown-item">Sign up for Donations</a></li>
-            <li class="nav-item" style="padding-right: 1rem;"><a href="./my_flask_app/templates/Help Us.html" class="dropdown-item">Help Us</a></li>
-            <li class="nav-item" style="padding-right: 1rem;"><a href="./pages/templates/Contact Us.html" class="dropdown-item">Contact Us</a></li>
+            <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('donate') }}" class="dropdown-item">Donate</a></li>
+            <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('signup') }}" class="dropdown-item">Sign up for Donations</a></li>
+            <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('help') }}" class="dropdown-item">Help Us</a></li>
+            <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('contact') }}" class="dropdown-item">Contact Us</a></li>
         </ul>
         
         
     </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script src="resources/scripts/navShrink.js"></script>
+<script src="{{ url_for('static', filename='scripts/navShrink.js') }}"></script>
 </body>
 </html>
