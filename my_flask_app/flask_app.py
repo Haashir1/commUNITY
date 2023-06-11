@@ -1,39 +1,11 @@
-from flask import Flask, render_template, request
+
+# A very simple Flask Hello World app for you to get started with...
+
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/help')
-def help():
-    return render_template('Help Us.html')
-
-@app.route('/donate')
-def donate():
-    return render_template('Donate.html')
-
-@app.route('/signup')
-def signup():
-    return render_template('Sign Up for Donations.html')
-
-@app.route('/contact')
-def contact():
-    return render_template('Contact Us.html')
-
-@app.route('/save-form-data', methods=['POST'])
-def save_form_data():
-    # Handle form data submission here
-    name = request.form.get('name')
-    email = request.form.get('email')
-    message = request.form.get('message')
-    
-    # Process the form data and save it
-    
-    return "Form submitted successfully!"
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9029)
-
+def hello_world():
+    return 'Hello from Flask!'
 
