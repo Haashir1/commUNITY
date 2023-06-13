@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.banner::before {
+.banner::after {
   content: "";
   background: url("/static/images/header.png") no-repeat center center fixed;
   background-size: cover;
@@ -44,7 +44,6 @@
   height: auto;
   display: block;
 }
-
 
 
 [data-bs-theme=light] {
