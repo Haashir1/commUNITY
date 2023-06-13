@@ -11,29 +11,31 @@
   height: 400px; /* Adjust the height as needed */
 }
 
-.jumbotron-image img {
+header {
+  position: relative;
+  height: 100vh;
+}
+
+.banner {
+  position: relative;
+  height: 100%;
+}
+
+.banner-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transition: opacity 0.5s;
+  background-image: url(/static/images/logo.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
-.jumbotron-image h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 48px; /* Adjust the font size as needed */
-  text-align: center;
-}
-
-.jumbotron-image.scrolled img {
-  opacity: 0;
+.jumbotron-banner {
+  position: relative;
+  z-index: 1;
 }
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
