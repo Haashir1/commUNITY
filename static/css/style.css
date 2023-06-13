@@ -6,6 +6,7 @@
  */
  .banner {
   position: relative;
+  height: 1000px;
   overflow: hidden;
 }
 
@@ -26,6 +27,7 @@
 .banner-content {
   position: relative;
   z-index: 1;
+  background-color: transparent;
 }
 
 .banner-image {
@@ -50,11 +52,6 @@
 
 .banner.scrolling .banner-image {
   transform: translateY(-50%);
-}
-
-.jumbotron-banner h1,
-.jumbotron-banner p {
-  color: #fff; /* Set the text color to white */
 }
 
 @media screen and (max-width: 767px) {
