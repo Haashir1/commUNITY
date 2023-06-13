@@ -18,11 +18,11 @@
     <script src="{{ url_for('serve_static', filename='js/colorModes.js') }}"></script>
 </head>
 <body>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <nav class="navbar navbar-expand-xl bg-body-tertiary shadow" style="position: sticky; top: 0;">
       <div class="container-fluid mx-4">
         <a href="/" class="navbar-logo me-5">
-          <img src="/static/voluntron-logo.png" alt="Voluntron" height="50px">
+          <img src="/static/images/new logo.png" alt="commUNITY" height="50px">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,44 +31,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-          </ul>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <form class="d-flex" method="post" action="/search/">
-              <input class="form-control me-3 query" placeholder="What do you need help with?" name="q">
-              <button class="btn btn-outline-secondary" type="submit">Find a volunteer</button>
-            </form>
-          </ul>
-          
-          <ul class="navbar-nav mw-auto">
-            <li class="nav-item me-3"><a class="nav-link disabled">
-                Signed in as Founder 1
-            </a></li>
-            <li class="nav-item mw-5">
-              <a class="nav-link account-name" href="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item mw-2"><a class="nav-link" href="/auth/logout">Log Out</a></li>
-          </ul>
-          
+          </ul>      
         </div>
       </div>
     </nav>
 <section class="content">
-<header>
-        
-  <div class="banner">
-    <div class="banner-img"></div>
-    <div class="jumbotron jumbotron-banner banner-content container-sm my-4 px-3 py-3 text-light banner">
-      <h1 class="display-5">Voluntron's Story</h1>
-      <p class="fs-5 jumbotron-desc">
-        Voluntron is an innovative website developed by a group of motivated high schoolers dedicated to fostering
-        connections and supporting communities, in Canton and around the United States. Our dynamic platform serves
-        as a hub, linking passionate volunteers with individuals seeking help.
-      </p>
-      
+  <header>
+    <div class="banner">
+      <div class="banner-img">
+        <img src="/static/images/header.png" alt="Banner Image">
+      </div>
+      <div class="jumbotron jumbotron-banner banner-content container-sm my-4 px-3 py-3 text-light banner">
+        <h1 class="display-5">commUNITY Story</h1>
+        <p class="fs-5 jumbotron-desc">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos obcaecati quidem eligendi aut, recusandae commodi ducimus ex corrupti suscipit ipsum impedit temporibus dicta eius rerum corporis eos, quas, laborum maiores.
+        </p>
+      </div>
     </div>
-  </div>
+  </header>
   
-</header> 
 <div class="jumbotron bg-body-tertiary border rounded mx-auto my-5 p-4" style="width: 80vw;">
     <div class="container-sm">
         <h1 class="display-4 bt-primary btn-lg mx-auto text-center">Welcome to commUNITY</h1>
