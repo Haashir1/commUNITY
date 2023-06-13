@@ -107,17 +107,15 @@
     </footer>
 </div>
 <script>
-    // Get the form element
+  document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('form');
+    var messageDiv = document.getElementById('submission-message');
 
-    // Add an event listener to listen for form submission
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission behavior
-
-      // Create a new FormData object
+      event.preventDefault();
+      
       var formData = new FormData(form);
 
-      // Send a POST request to the server
       fetch('/save-form-data', {
         method: 'POST',
         body: formData
@@ -126,14 +124,13 @@
         return response.json();
       })
       .then(function(data) {
-        // Display the form submission message
-        var messageDiv = document.getElementById('submission-message');
         messageDiv.innerText = data.message;
       })
       .catch(function(error) {
         console.error(error);
       });
     });
+  });
 </script>
 <script>
     const navbar = document.querySelector('nav.navbar');
