@@ -39,33 +39,9 @@
   transition: transform 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .banner-image {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-.banner-content,
-.banner-image {
-  transform: translateY(0);
-}
-
 .banner.scrolling .banner-image {
   transform: translateY(-50%);
 }
-
-@media screen and (max-width: 767px) {
-  .jumbotron-banner {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 100%;
-    padding: 1rem;
-  }
-}
-
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
