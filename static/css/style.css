@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.banner::after {
+.banner::before {
   content: "";
   background: url("/static/images/header.png") no-repeat center center fixed;
   background-size: cover;
@@ -25,23 +25,30 @@
 }
 
 .banner-content {
-  position: relative;
-  z-index: 1;
-  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .banner-image {
   width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease;
 }
 
-.banner.scrolling .banner-image {
-  transform: translateY(-50%);
-}
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
