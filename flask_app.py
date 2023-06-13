@@ -31,7 +31,8 @@ def save_form_data():
 
     # Process the form data and save it
 
-    return "Form submitted successfully!"
+    # Return a JSON response indicating the form submission success
+    return jsonify({'message': 'Form submitted successfully!'})
 
 # Route for serving static files
 @app.route('/static/<path:filename>')
