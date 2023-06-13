@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('serve_static', filename='css/style.css') }}">
     <script src="{{ url_for('serve_static', filename='js/colorModes.js') }}"></script>
-    <script src="{{ url_for('serve_static', filename='js/formsubmission.js') }}"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg px-5 py-3 fixed-top shadow bg-primary text-white" data-bs-theme="dark">
@@ -91,7 +90,7 @@
     </div>
 </div>
 <h1>Form Submission</h1>
-<form id="form" method="POST" action="http://192.168.0.214:9029/save-form-data">
+<form id="form" method="POST" action="/save-form-data">
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" required><br><br>
 
@@ -103,8 +102,8 @@
 
   <input type="submit" value="Submit">
 </form>
-
-
+<div id="submission-message"></div>
+</form>
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-muted">© 2023 commUNITY</p>
@@ -122,12 +121,40 @@
         
     </footer>
 </div>
+<script>
+    // Get the form element
+    var form = document.getElementById('form');
+
+    // Add an event listener to listen for form submission
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Create a new FormData object
+      var formData = new FormData(form);
+
+      // Send a POST request to the server
+      fetch('/save-form-data', {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        // Display the form submission message
+        var messageDiv = document.getElementById('submission-message');
+        messageDiv.innerText = data.message;
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
+    });
+  </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ url_for('serve_static', filename='css/style.css') }}">
 <script src="{{ url_for('static', filename='scripts/navShrink.js') }}"></script>
 <script src="{{ url_for('static', filename='scripts/imageScroll.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="{{ url_for('serve_static', filename='js/colorModes.js') }}"></script>
-<script src="{{ url_for('serve_static', filename='js/formsubmission.js') }}"></script>
 </body>
 </html>
