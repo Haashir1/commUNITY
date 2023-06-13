@@ -18,7 +18,7 @@
     <script src="{{ url_for('serve_static', filename='js/colorModes.js') }}"></script>
 </head>
 <body>
-    <link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/style.css">
     <nav class="navbar navbar-expand-xl bg-body-tertiary shadow" style="position: sticky; top: 0;">
       <div class="container-fluid mx-4">
         <a href="/" class="navbar-logo me-5">
@@ -30,16 +30,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
           </ul>      
         </div>
       </div>
     </nav>
 <section class="content">
-<header>
-        
+<header> 
   <div class="banner">
-    <div class="banner-img"></div>
+    <div class="header"></div>
     <div class="jumbotron jumbotron-banner banner-content container-sm my-4 px-3 py-3 text-light banner">
       <h1 class="display-5">Voluntron's Story</h1>
       <p class="fs-5 jumbotron-desc">
@@ -47,10 +46,8 @@
         connections and supporting communities, in Canton and around the United States. Our dynamic platform serves
         as a hub, linking passionate volunteers with individuals seeking help.
       </p>
-      
     </div>
   </div>
-  
 </header> 
 <div class="jumbotron bg-body-tertiary border rounded mx-auto my-5 p-4" style="width: 80vw;">
     <div class="container-sm">
@@ -96,7 +93,7 @@
         <p class="col-md-4 mb-0 text-muted">© 2023 commUNITY</p>
 
         <a href="{{ url_for('index') }}" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <img src="{{ url_for('serve_static', filename='images/logo.png') }}" alt="commUNITY Logo" height="40px">
+            <img src="{{ url_for('serve_static', filename='images/new logo.png') }}" alt="commUNITY Logo" height="40px">
         </a>
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('donate') }}" class="dropdown-item">Donate</a></li>
