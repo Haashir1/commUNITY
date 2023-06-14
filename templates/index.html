@@ -50,7 +50,7 @@
     <div class="cards row mt-5 mx-5">
       <div class="col-lg my-4">
         <div class="card">
-          <img src="{{ url_for('serve_static', filename='donations.png') }}" class="card-img-top" alt="img">
+          <img src="{{ url_for('serve_static', filename='images/donations.png') }}" class="card-img-top" alt="img">
           <div class="card-body">
             <h5 class="card-title">Interested in Donating?</h5>
             <p class="card-text">
@@ -63,7 +63,39 @@
         </div>
       </div>
     </div>
-    
+    <div class="cards row mt-5 mx-5">
+      <div class="col-lg my-4">
+        <div class="card">
+          <img src="{{ url_for('serve_static', filename='images/donations.png') }}" class="card-img-top" alt="img">
+          <div class="card-body">
+            <h5 class="card-title">Interested in Donating?</h5>
+            <p class="card-text">
+              Have something you want to donate locally? Here in Michigan, we have one of the largest populations of refugees in the US. Your donations can help countless people in our community.
+            </p>
+            <form class="d-flex" method="post" action="{{ url_for('donate') }}">
+              <button class="btn btn-outline-secondary" type="submit">Donate Now</button>
+            </form>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cards row mt-5 mx-5">
+      <div class="col-lg my-4">
+        <div class="card">
+          <img src="{{ url_for('serve_static', filename='images/donations.png') }}" class="card-img-top" alt="img">
+          <div class="card-body">
+            <h5 class="card-title">Interested in Donating?</h5>
+            <p class="card-text">
+              Have something you want to donate locally? Here in Michigan, we have one of the largest populations of refugees in the US. Your donations can help countless people in our community.
+            </p>
+            <form class="d-flex" method="post" action="{{ url_for('donate') }}">
+              <button class="btn btn-outline-secondary" type="submit">Donate Now</button>
+            </form>            
+          </div>
+        </div>
+      </div>
+    </div>
+            
 
 
 <div class="container">
