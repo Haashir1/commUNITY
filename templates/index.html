@@ -17,37 +17,38 @@
     <script src="{{ url_for('serve_static', filename='js/colorModes.js') }}"></script>
 </head>
 <body>
-<link rel="stylesheet" href="/static/css/style.css">
-    <nav class="navbar navbar-expand-xl bg-body-tertiary shadow" style="position: sticky; top: 0;">
-      <div class="container-fluid mx-4">
-        <a href="/" class="navbar-logo me-5">
-          <img src="/static/images/new logo.png" alt="commUNITY" height="50px">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          </ul>      
+  <link rel="stylesheet" href="/static/css/style.css">
+  <nav class="navbar navbar-expand-xl bg-body-tertiary shadow" style="position: sticky; top: 0;">
+    <div class="container-fluid mx-4">
+      <a href="/" class="navbar-logo me-5">
+        <img src="/static/images/new logo.png" alt="commUNITY" height="50px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>      
+      </div>
+    </div>
+  </nav>
+  <section class="content">
+    <header>
+      <div class="banner">
+        <div class="banner-content">
+          <h1 class="display-5">Welcome to commUNITY</h1>
+          <p class="fs-5 jumbotron-desc">
+            Have a desire to give locally, but could never figure out how? 
+            In need of a quick and secure way to obtain free items?
+            Perhaps interested in volunteering? Well, this is the place for you!!
+          </p>
         </div>
       </div>
-    </nav>
-    <section class="content">
-      <header>
-        <div class="banner">
-          <div class="banner-content">
-            <h1 class="display-5">Welcome to commUNITY</h1>
-            <p class="fs-5 jumbotron-desc">
-              Have a desire to give locally, but could never figure out how? 
-              In need of quick and secure way to obtain free items?
-              Perhaps interested in volunteering? Well, this is the place for you!!
-            </p>
-          </div>
-        </div>
-      </header>
-    </section>
+    </header>
+  </section>
+  
 <div class="row mt-5 mx-5">
       <div class="col-lg-4 my-4">
         <div class="card">
@@ -55,10 +56,10 @@
           <div class="card-body">
             <h5 class="card-title">Interested in Donating?</h5>
             <p class="card-text">
-              Have something you want to donate locally? Here in Michigan, we have one of the largest populations of refugees in the US. Your donations can help countless people in our community.
+              Looking to make a local donation? Rest assured, our streamlined procedures ensure your items reach those who genuinely need them. Michigan, home to one of the largest refugee populations in the US, offers a profound opportunity for your contributions to positively impact countless lives in our community.
             </p>
             <form class="d-flex" method="post" action="{{ url_for('donate') }}">
-              <button class="btn btn-outline-secondary" type="submit">Donate Now</button>
+              <button class="btn btn-outline-secondary" type="submit">Learn More</button>
             </form>            
           </div>
         </div>
@@ -67,12 +68,12 @@
         <div class="card">
           <img src="{{ url_for('serve_static', filename='images/donations.png') }}" class="card-img-top" alt="img">
           <div class="card-body">
-            <h5 class="card-title">Interested in Donating?</h5>
+            <h5 class="card-title">Interested in volunteering?</h5>
             <p class="card-text">
-              Have something you want to donate locally? Here in Michigan, we have one of the largest populations of refugees in the US. Your donations can help countless people in our community.
+              Looking to make a meaningful impact in your community? Join us at our drop-off centers and contribute by helping package donations. If you have a vehicle you can also assist us in transporting donations over the weekends. Whichever option you choose, rest assured that flexible scheduling options are available moreover, your efforts will count towards CAS or NHS hours.
             </p>
             <form class="d-flex" method="post" action="{{ url_for('donate') }}">
-              <button class="btn btn-outline-secondary" type="submit">Donate Now</button>
+              <button class="btn btn-outline-secondary" type="submit">Help out now!</button>
             </form>            
           </div>
         </div>
@@ -81,12 +82,12 @@
         <div class="card">
           <img src="{{ url_for('serve_static', filename='images/donations.png') }}" class="card-img-top" alt="img">
           <div class="card-body">
-            <h5 class="card-title">Interested in Donating?</h5>
+            <h5 class="card-title">Sign up for Donations?</h5>
             <p class="card-text">
-              Have something you want to donate locally? Here in Michigan, we have one of the largest populations of refugees in the US. Your donations can help countless people in our community.
+              Looking to receive donations? We provide multiple convenient options for accepting contributions. With our efficient and secure process, you can rest assured that the desired items will be received in a timely and secure manner. 
             </p>
             <form class="d-flex" method="post" action="{{ url_for('donate') }}">
-              <button class="btn btn-outline-secondary" type="submit">Donate Now</button>
+              <button class="btn btn-outline-secondary" type="submit">Sign up today</button>
             </form>            
           </div>
         </div>
