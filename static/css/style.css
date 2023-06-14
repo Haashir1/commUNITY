@@ -4,6 +4,17 @@
  * Copyright 2011-2022 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ .card {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-lg-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
  .banner {
   position: relative;
   height: 100vh;
