@@ -23,7 +23,7 @@ def contact():
     return render_template('Contact Us.html')
 
 @app.route('/about')
-def contact():
+def about():
     return render_template('About.html')
 
 # Route for serving static files
@@ -33,7 +33,5 @@ def serve_static(filename):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9029)
-
-
 
 
