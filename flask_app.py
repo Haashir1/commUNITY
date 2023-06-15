@@ -22,6 +22,9 @@ def signup():
 def contact():
     return render_template('Contact Us.html')
 
+@app.route('/about')
+def contact():
+    return render_template('About.html')
 
 # Route for serving static files
 @app.route('/static/<path:filename>')
