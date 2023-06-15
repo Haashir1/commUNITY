@@ -22,7 +22,7 @@ def signup():
 def contact():
     return render_template('Contact Us.html')
 
-@app.route('/About')
+@app.route('/about')
 def about():
     return render_template('About.html')
 
