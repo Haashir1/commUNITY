@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 /* Add this CSS to your existing stylesheet */
+/* Add this CSS to your existing stylesheet */
 .accordion-item {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -22,14 +23,20 @@
   padding: 10px;
 }
 
-/* You can customize the colors below to your preference */
+/* Customized colors for the expanded and collapsed states */
 .accordion-header:not(.collapsed) {
   background-color: #f1f1f1;
-  color: #000; /* Text color for the accordion header when expanded */
+}
+
+.accordion-header:not(.collapsed) .accordion-button {
+  color: #fff; /* Text color for the accordion header when expanded */
 }
 
 .accordion-header.collapsed {
   background-color: #f1f1f1;
+}
+
+.accordion-header.collapsed .accordion-button {
   color: #000; /* Text color for the accordion header when collapsed */
 }
 
