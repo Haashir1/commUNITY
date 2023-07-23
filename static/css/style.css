@@ -6,6 +6,7 @@
  */
 /* Add this CSS to your existing stylesheet */
 /* Add this CSS to your existing stylesheet */
+/* Add this CSS to your existing stylesheet */
 .accordion-item {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -22,7 +23,7 @@
   padding: 10px;
 }
 
-/* Customized colors for the expanded and collapsed states */
+/* Customized color for the expanded state */
 .accordion-header:not(.collapsed) {
   background-color: #f1f1f1;
 }
@@ -31,13 +32,11 @@
   color: #000; /* Text color for the accordion header when expanded */
 }
 
-.accordion-header.collapsed {
-  background-color: #f1f1f1;
+/* Text color for the accordion header when collapsed */
+.accordion-header.collapsed .accordion-button {
+  color: #000;
 }
 
-.accordion-header.collapsed .accordion-button {
-  color: #000; /* Text color for the accordion header when collapsed */
-}
 
 
 
