@@ -176,7 +176,21 @@
 </div>
 <script>
   // Initialize the accordion functionality
-  var accordion = new bootstrap.Collapse(document.querySelector('.accordion'));
+  document.addEventListener('DOMContentLoaded', function () {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+      const button = item.querySelector('.accordion-button');
+      const collapse = item.querySelector('.accordion-collapse');
+
+      button.addEventListener('click', () => {
+        // Toggle the 'collapsed' class on the button to change its appearance
+        button.classList.toggle('collapsed');
+        // Toggle the 'show' class on the collapse element to reveal or hide the answer
+        collapse.classList.toggle('show');
+      });
+    });
+  });
 </script>
    
 </body>
