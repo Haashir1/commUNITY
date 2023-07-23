@@ -191,11 +191,18 @@
         // Toggle the 'collapsed' class on the button to change its appearance
         button.classList.toggle('collapsed');
         // Toggle the 'show' class on the collapse element to reveal or hide the answer
-        collapse.classList.toggle('show');
+        const isExpanded = collapse.classList.contains('show');
+        if (isExpanded) {
+          // Use the Bootstrap 5 'hide' method to close the accordion item
+          $(collapse).collapse('hide');
+        } else {
+          // Use the Bootstrap 5 'show' method to open the accordion item
+          $(collapse).collapse('show');
+        }
       });
     });
   });
 </script>
-   
+  
 </body>
 </html>
