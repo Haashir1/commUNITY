@@ -4,33 +4,35 @@
  * Copyright 2011-2022 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-  .accordion-item {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-
-  .accordion-item .accordion-button:not(.collapsed) {
-    background-color: #f1f1f1;
-  }
-
-.accordion-item .accordion-button {
-  color: #000; 
+/* Add this CSS to your existing stylesheet */
+.accordion-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-.accordion-item .accordion-button:not(.collapsed) {
-  color: #fff; 
+.accordion-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+  color: #000; /* Text color for the accordion header */
 }
 
-  .accordion-header {
-    background-color: #f1f1f1;
-    padding: 10px;
-    cursor: pointer;
-  }
+.accordion-body {
+  padding: 10px;
+}
 
-  .accordion-body {
-    padding: 10px;
-  }
+/* You can customize the colors below to your preference */
+.accordion-header:not(.collapsed) {
+  background-color: #f1f1f1;
+  color: #000; /* Text color for the accordion header when expanded */
+}
+
+.accordion-header.collapsed {
+  background-color: #f1f1f1;
+  color: #000; /* Text color for the accordion header when collapsed */
+}
+
 
 
  .card {
