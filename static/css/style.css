@@ -13,7 +13,15 @@
   .accordion-item .accordion-button:not(.collapsed) {
     background-color: #f1f1f1;
   }
-  
+
+.accordion-item .accordion-button {
+  color: #000; 
+}
+
+.accordion-item .accordion-button:not(.collapsed) {
+  color: #fff; 
+}
+
   .accordion-header {
     background-color: #f1f1f1;
     padding: 10px;
