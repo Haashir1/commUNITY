@@ -16,7 +16,6 @@
   background-color: #f1f1f1;
   padding: 10px;
   cursor: pointer;
-  color: #000; /* Text color for the accordion header */
 }
 
 .accordion-body {
@@ -29,7 +28,7 @@
 }
 
 .accordion-header:not(.collapsed) .accordion-button {
-  color: #fff; /* Text color for the accordion header when expanded */
+  color: #000; /* Text color for the accordion header when expanded */
 }
 
 .accordion-header.collapsed {
