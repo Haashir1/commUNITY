@@ -67,7 +67,7 @@
     </div>
   </div>                 
 
-  <div class="container">
+ 
     <h2 class="text-center">FAQ</h2> 
     <div class="accordion" id="faqAccordion">
       <div class="accordion-item">
@@ -157,10 +157,8 @@
           </div>
         </div>
       </div> 
-      <!-- Add more accordion items with unique IDs as needed -->
-  
+      <!-- Add more accordion items with unique IDs as needed --> 
     </div>
-  </div>
   
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -180,28 +178,18 @@
     </footer>
 </div>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const accordionItems = document.querySelectorAll('.accordion-item');
+document.addEventListener('DOMContentLoaded', function () {
+  const accordionItems = document.querySelectorAll('.accordion-item');
 
-    accordionItems.forEach(item => {
-      const button = item.querySelector('.accordion-button');
+  accordionItems.forEach(item => {
+    const button = item.querySelector('.accordion-button');
+    const collapse = item.querySelector('.accordion-collapse');
 
-      button.addEventListener('click', () => {
-        // Toggle the 'show' class on the collapse element to reveal or hide the answer
-        const collapse = item.querySelector('.accordion-collapse');
-        collapse.classList.toggle('show');
-
-        // Close other accordion items when a new one is opened
-        accordionItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            const otherCollapse = otherItem.querySelector('.accordion-collapse');
-            otherCollapse.classList.remove('show');
-          }
-        });
-      });
+    button.addEventListener('click', () => {
+      collapse.classList.toggle('show');
     });
   });
+});
 </script>
-
 </body>
 </html>
