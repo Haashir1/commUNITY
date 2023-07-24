@@ -8,10 +8,6 @@
 /* Add this CSS to your existing stylesheet */
 /* Add this CSS to your existing stylesheet */
 
-.nav-item .nav-link[href="/about.html"] {
-  color: black;
-}
-
 .accordion-item {
     border: 1px solid #ccc;
     border-radius: 5px;
