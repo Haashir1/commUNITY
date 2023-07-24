@@ -7,38 +7,35 @@
 /* Add this CSS to your existing stylesheet */
 /* Add this CSS to your existing stylesheet */
 /* Add this CSS to your existing stylesheet */
-
 .accordion-item {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
 
-  .accordion-header {
-    background-color: #f1f1f1;
-    padding: 10px;
-    cursor: pointer;
-  }
+.accordion-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+}
 
-  .accordion-body {
-    padding: 10px;
-  }
+.accordion-body {
+  padding: 10px;
+}
 
-  /* Customized colors for the expanded and collapsed states */
-  .accordion-header:not(.collapsed) {
-    background-color: #f1f1f1;
-  }
+/* Customized colors for the expanded and collapsed states */
+.accordion-header:not(.collapsed) {
+  background-color: #f1f1f1;
+}
 
-  .accordion-header:not(.collapsed) .accordion-button {
-    color: #000; /* Text color for the accordion header when expanded */
-  }
+.accordion-header:not(.collapsed) .accordion-button {
+  color: #000; /* Text color for the accordion header when expanded */
+}
 
-  /* Text color for the accordion header when collapsed */
-  .accordion-header.collapsed .accordion-button {
-    color: #000;
-  }
-
-
+/* Text color for the accordion header when collapsed */
+.accordion-header.collapsed .accordion-button {
+  color: #000;
+}
 
 
  .card {
