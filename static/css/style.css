@@ -7,6 +7,11 @@
 /* Add this CSS to your existing stylesheet */
 /* Add this CSS to your existing stylesheet */
 /* Add this CSS to your existing stylesheet */
+/* CSS to make the "about" link black */
+.navbar-nav .nav-link {
+  color: #000;
+}
+
 .accordion-item {
   border: 1px solid #ccc;
   border-radius: 5px;
