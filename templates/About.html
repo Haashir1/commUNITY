@@ -67,9 +67,8 @@
   </div>                 
 
   <div class="container">
-    <h2 class="text-center">FAQ</h2>
-  
-    <div class="accordion">
+    <h2 class="text-center">FAQ</h2> 
+    <div class="accordion" id="faqAccordion">
       <div class="accordion-item">
         <h4 class="accordion-header" id="q1">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">
@@ -189,21 +188,11 @@
       const collapse = item.querySelector('.accordion-collapse');
 
       button.addEventListener('click', () => {
-        // Toggle the 'collapsed' class on the button to change its appearance
-        button.classList.toggle('collapsed');
         // Toggle the 'show' class on the collapse element to reveal or hide the answer
-        const isExpanded = collapse.classList.contains('show');
-        if (isExpanded) {
-          // Use the Bootstrap 5 'hide' method to close the accordion item
-          $(collapse).collapse('hide');
-        } else {
-          // Use the Bootstrap 5 'show' method to open the accordion item
-          $(collapse).collapse('show');
-        }
+        collapse.classList.toggle('show');
       });
     });
   });
-</script>
-  
+</script>  
 </body>
 </html>
