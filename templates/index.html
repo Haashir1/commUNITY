@@ -18,9 +18,6 @@
 </head>
 <body>
   <link rel="stylesheet" href="/static/css/style.css">
-<!-- Index.html -->
-<!-- ... (existing code) ... -->
-
 <nav class="navbar navbar-expand-xl bg-body-tertiary shadow" style="position: sticky; top: 0;">
   <div class="container-fluid mx-4">
       <a href="/" class="navbar-logo me-5">
@@ -33,23 +30,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+                  <a class="nav-link dropdown-toggle" href="{{ url_for('about') }}" id="aboutDropdown" role="button"
                       data-bs-toggle="dropdown" aria-expanded="false">
                       About
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                       <li><a class="dropdown-item" href="{{ url_for('about') }}">About Us</a></li>
-                      <!-- Use JavaScript to scroll to the FAQ section on the about page -->
-                      <li><a class="dropdown-item" href="javascript:void(0);" onclick="scrollToFAQ()">FAQ</a></li>
+                      <!-- Remove the JavaScript function -->
+                      <li><a class="dropdown-item" href="{{ url_for('about') }}#faqAccordion">FAQ</a></li>
                   </ul>
               </li>
           </ul>
       </div>
   </div>
 </nav>
-
-
-
   <section class="content">
     <header>
       <div class="banner">
