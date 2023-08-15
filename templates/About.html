@@ -25,7 +25,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- Removed the direct link to about.html -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -33,6 +32,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
               <li><a class="dropdown-item" href="{{ url_for('about') }}">About Us</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('contact') }}">Contact Us</a></li>
               <li><a class="dropdown-item" href="#faqAccordion">FAQ</a></li>
             </ul>
           </li>
