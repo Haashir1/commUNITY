@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -6,10 +6,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/help')
+@app.route('/help')  # Changed from '/volunteer'
 def help():
     return render_template('Volunteer.html')
-
 
 @app.route('/donate')
 def donate():
