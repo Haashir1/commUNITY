@@ -45,7 +45,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('help') }}">Volunteer</a>
+                <a class="nav-link" href="{{ url_for('volunteer') }}">Volunteer</a>
+            </li>
+        </ul>
+    </div> 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('volunteer') }}">Volunteer</a>
             </li>
         </ul>
     </div> 
@@ -91,7 +98,7 @@
           <p class="card-text">
             Want to make a meaningful impact in your community? Join us at our drop-off centers and contribute by helping package donations. If you have a vehicle, you can also assist us in transporting donations over the weekends. Whichever option you choose, rest assured that flexible scheduling options are available. Moreover, your efforts will count towards CAS or NHS hours.
           </p>
-          <a class="btn btn-outline-secondary" href="{{ url_for('help') }}">volunteer</a>
+          <a class="btn btn-outline-secondary" href="{{ url_for('volunteer') }}">Volunteer</a>
           
         </div>
       </div>
@@ -145,7 +152,7 @@
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('donate') }}" class="dropdown-item">Donate</a></li>
             <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('signup') }}" class="dropdown-item">Sign up for Donations</a></li>
-            <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('help') }}" class="dropdown-item">volunteer</a></li>
+            <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('volunteer') }}" class="dropdown-item">Volunteer</a></li>
             <li class="nav-item" style="padding-right: 1rem;"><a href="{{ url_for('contact') }}" class="dropdown-item">Contact Us</a></li>
         </ul>  
     </footer>
